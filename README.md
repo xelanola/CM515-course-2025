@@ -6,7 +6,7 @@
 | January 27     | January 29     | 1      | AI issues and coding                         | Multiple           | 2    |
 | February 3     | February 5    | 2      | R/Rstudio                         | Erin               | 3    |
 | February 10     | February 12     | 3      | Files and Folder Navigation              | Shady              | 4    |
-| February 17| February 19 | 4     | File formats               | Unassigned Hemmerlein  | 5   |
+| February 17| February 19 | 4     | File formats               | Unassigned   | 5   |
 | February 24| February 26| 5      | TidyR and pipes       | Meg    | 6  |
 | March 3| March 5 | 6      | ggplot visualization                |  Alex Alon       | 7    |
 | March 10    | March 12    | 7      | Plots in presentation                  | Dan Sloan| 8    |
