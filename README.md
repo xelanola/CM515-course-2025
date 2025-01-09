@@ -1,23 +1,23 @@
-# CM515-course-2024
+# CM515-course-2025
 
 | Monday               | Wednesday            | Module | Description                     | Instructor         | Week |
 |----------------------|----------------------|--------|---------------------------------|--------------------|------|
-| January 15     | January 17     | 0      | Syllabus/Setup                  | David              | 1    |
-| January 22     | January 24     | 1      | chatGPT                         | Multiple           | 2    |
-| January 29     | January 31     | 2      | Rstudio                         | Erin               | 3    |
-| February 5     | February 7     | 3      | Files and Folders               | Shady              | 4    |
-| February 12| February 14 | 4     | Tidyverse               | Meg Hemmerlein  | 5   |
-| February 19| February 21| 5      | ggplot visualization        | Alex Alon    | 6  |
-| February 26| February 28| 6      | Getting Data                | Jess Hill      | 7    |
-| March 4    | March 6    | 7      | Proteomics                  | Corey Broeckling| 8    |
-| March 11   | March 13   | 8      | SPRING BREAK                | SPRING BREAK   | 9    |
+| January 20 (MLK)     | January 22     | 0      | Syllabus/Accounts                  | David              | 1    |
+| January 27     | January 29     | 1      | AI issues and coding                         | Multiple           | 2    |
+| February 3     | February 5    | 2      | R/Rstudio                         | Erin               | 3    |
+| February 10     | February 12     | 3      | Files and Folder Navigation              | Shady              | 4    |
+| February 17| February 19 | 4     | File formats               | Unassigned Hemmerlein  | 5   |
+| February 24| February 26| 5      | TidyR and pipes       | Meg    | 6  |
+| March 3| March 5 | 6      | ggplot visualization                |  Alex Alon       | 7    |
+| March 10    | March 12    | 7      | Plots in presentation                  | Dan Sloan| 8    |
+| March 17   | March 19   | 8      | SPRING BREAK                | SPRING BREAK   | 9    |
 | |  | | | | |
-| March 18   | March 20   | 9      | Deeptools                  | Swygert     | 10   |
-| March 25  | March 27 | 10    | Image Analysis             | Melea/Rosi    | 11  |
-| April 1    | April 3  | 11    | Issues in Reproducible Research | Ben Prytherch| 12   |
-| April 8    | April 10   | 12    | Microbiome                 | Metcalf       | 13  |
-| April 15   | April 17   | 13     | Presenting Data           | Dan Sloan      | 14 |
-| April 22   | April 24   | 14     | Python Notebooks           | Connor         | 15   |
-| **April 29**   | **May 1**      | **15**     | **Github/Git Portfolio**                   | **David**          | **16**   |
-| **May 6**      | **May 8**      | **16**     | **Finals Week**                 |                    | **17**   |
+| March 24   | March 26   | 9      | Proteomics facility              | Corey Broeckling        | 10   |
+| March 31  | April 2 | 10    | Command line on file formats          | BASH team    | 11  |
+| April 7    | April 9  | 11    | Deeptools | Swygert | 12   |
+| April 14    | April 16   | 12    | Programming basics                 | Kira and others       | 13  |
+| April 21   | April 23   | 13     | Image analysis           | Rosi    | 14 |
+| April 28   | April 30   | 14     | Git your repo figured out          | Possibly David         | 15   |
+| May 5   | May 7      | 16     | Github/Git Portfolio                   | Kalani          | 16*  |
+| May 12      | May 14      | 16    | Finals Week                 |                    |17   |
 
