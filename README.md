@@ -18,6 +18,6 @@
 | April 14    | April 16   | 12    | Programming basics                 | Kira and others       | 13  |
 | April 21   | April 23   | 13     | Image analysis           | Rosi    | 14 |
 | April 28   | April 30   | 14     | Git your repo figured out          | Possibly David         | 15   |
-| May 5   | May 7      | 16     | Github/Git Portfolio                   | Kalani          | 16*  |
+| May 5   | May 7      | 16     | Github/Git Portfolio                   | Kalani          | 16  |
 | May 12      | May 14      | 16    | Finals Week                 |                    |17   |
 
