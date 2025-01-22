@@ -31,6 +31,8 @@ https://github.com/signup
 
 ### PCs only 
 
+In order to use the command line.
+
 Look into Cygwin https://www.cygwin.com/ OR install [Windows Linux Subsystem](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 
