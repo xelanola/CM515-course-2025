@@ -1,6 +1,6 @@
-## First day stuff
+## Required software and accounts
 
-### download and install (if you don't have it)
+### PCs, Macs and Linux: Download and install (if you don't have it)
 
 If you already have R/RStudio installed, you might have to update packages during the course.
 
@@ -28,5 +28,9 @@ https://github.com/signup
 
 [auth.openai.com/authorize...](https://auth.openai.com/authorize?audience=https%3A%2F%2Fapi.openai.com%2Fv1&client_id=TdJIcbe16WoTHtN95nyywh5E4yOo6ItG&country_code=US&device_id=5b138221-4da4-4cf8-b1f4-128dd4fb2d51&ext-login-allow-phone=true&ext-oai-did=5b138221-4da4-4cf8-b1f4-128dd4fb2d51&prompt=login&redirect_uri=https%3A%2F%2Fchatgpt.com%2Fapi%2Fauth%2Fcallback%2Fopenai&response_type=code&scope=openid+email+profile+offline_access+model.request+model.read+organization.read+organization.write&screen_hint=signup&state=Qxzf5JdSpuq4euLgjmLi9cTfcD44hV8YpxJAc9lV_gw&flow=treatment)
 
+
+### PCs only 
+
+Look into Cygwin https://www.cygwin.com/ OR install [Windows Linux Subsystem](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 
