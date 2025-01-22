@@ -2,7 +2,7 @@
 
 | Monday               | Wednesday            | Module | Description                        | Instructor         | Week |
 |----------------------|----------------------|--------|------------------------------------|--------------------|------|
-| January 20 (MLK)     | January 22           | 0      | Syllabus/Accounts                  | David              | 1    |
+| January 20 (MLK)     | January 22           | 0      | [Syllabus/Accounts](modules/00_Setup/Readme.md)        | David              | 1    |
 | January 27           | January 29           | 1      | AI issues and coding               | Multiple           | 2    |
 | February 3           | February 5           | 2      | R/Rstudio                          | Dr. Erin Nishimura | 3    |
 | February 10          | February 12          | 3      | Files and Folder Navigation        | Eliud              | 4    |
