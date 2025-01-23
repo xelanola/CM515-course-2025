@@ -5,3 +5,4 @@
 .DS_Store
 *-checkpoint.ipynb
 ~$*
+OPENAI_API_KEY.txt
