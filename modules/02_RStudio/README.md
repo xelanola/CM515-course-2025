@@ -53,9 +53,9 @@ In this first module, we will explore the basics of **R**. What is R?
   * How have my past **experiences** in mathematics, coding, or quantitation shaped how I experience these fields? 
     * Do I **enjoy** these subjects?
     * Am I **good at** them?
-    * Will I **fit in**?
-  * What about the **stories** we absorb from visual and print media? How can we add to our cache of stories?
-  
+  * How do the **stories** we absorb shape how we experience these fields?
+  * How can we expand our cache of stories intentionally?
+
 <img align="center" src="webContent/MediaDepictions.jpg" width="800" >
   
 Continue on to [R Basics](R_Basics.md)
