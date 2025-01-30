@@ -1,4 +1,4 @@
-# Three Shells copied from here[https://colorado-state-university-cmb.github.io/shell-novice/]
+# Three Shells copied from [Unix Shell Novice](https://colorado-state-university-cmb.github.io/shell-novice/)
 
 1. Introducing the Shell AND Navigating Files and Directories
 2. Working with Files
