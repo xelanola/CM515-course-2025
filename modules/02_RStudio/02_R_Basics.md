@@ -48,18 +48,13 @@
   * 2000 - R 1.0.0 is released 
   * 2011 - R versions start getting funny nicknames. R 2.14.0 Great Pumpkin
   * 2010 - CRAN exceeds 10,000 published packages!
-  * 2024 - R's latest version is 4.3.2 "Eye Holes"
-  * 2024 - Estimated 2 million R users worldwide (91,000 women registered in the R-Ladies user group)
+  * 2025 - R's latest version is 4.4.2 "Pile of Leaves"
+  * 2025 - Estimated 2 million R users worldwide
   * [R-bloggers](https://www.r-bloggers.com/) - great for keeping up with new developments
 
 R is now a large, diverse community of users and developers. Here is a picture from the 2018 New York R conference courtesy of R-Bloggers:
 
 <img src="webContent/Conference-Panorama-crop.jpeg" width="900">
-
-And here is last fall's Chicago R-Ladies conference:
-
-<img src="webContent/2023_R_Ladies.jpg" width="900">
-
 
 >  “R changed my opinion of humanity to some extent, to see how people are really willing to freely give of themselves and produce something larger than themselves without any thought of personal glory. There’s a lot of work with no recognition.” - Ross Ihaka
 
