@@ -49,7 +49,6 @@
   * 2011 - R versions start getting funny nicknames. R 2.14.0 Great Pumpkin
   * 2010 - CRAN exceeds 10,000 published packages!
   * 2025 - R's latest version is 4.4.2 "Pile of Leaves"
-  * 2025 - Estimated 2 million R users worldwide
   * [R-bloggers](https://www.r-bloggers.com/) - great for keeping up with new developments
 
 R is now a large, diverse community of users and developers. Here is a picture from the 2018 New York R conference courtesy of R-Bloggers:
@@ -80,4 +79,4 @@ C. Evaluate the documentation your packages have available. Compare the document
 
 -----
 
-Continue on to [Interacting with R](03_240129_InteractingWithR.md)
+Continue on to [Interacting with R](03_InteractingWithR.md)
