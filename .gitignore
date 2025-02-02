@@ -6,3 +6,12 @@
 *-checkpoint.ipynb
 ~$*
 OPENAI_API_KEY.txt
+.fasta
+.fa
+.fna
+.fastq
+.fq
+.gtf
+.gff3
+.bed
+
