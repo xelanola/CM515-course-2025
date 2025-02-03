@@ -45,7 +45,10 @@ It is a mRNA riboseq data set that Naly would like processed.
 ### Danielle
 The data set I am using represents the area of detection of different recombinant PIN proteins expressed in Brachypodium.
 ```{r Danielle}
-danielle <- read_excel("assignment_submissions/submissions2/samsondanielle_LATE_357338_34472110_week 0 assignment data submisison.xlsx")
+#danielle_v1 <- read_excel("assignment_submissions/submissions2/samsondanielle_LATE_357338_34472110_week 0 assignment data submisison.xlsx")
+#file.copy("assignment_submissions/submissions2/samsondanielle_LATE_357338_34472110_week 0 assignment data submisison.xlsx",'student_dataset_previews/danielle.xlsx')
+danielle = read_excel('student_dataset_previews/danielle.xlsx')
+#all(danielle == danielle_v1)
 head(danielle)
 ```
 
@@ -54,11 +57,8 @@ head(danielle)
 
 Cut&Run differential bind output for Rosenberg lab (Aedees mosquito sugar fed v bloodfed day 3)
 ``` {r Gianna}
-library(tidyr)
-library('rvest')
-gianna_html = read_html("assignment_submissions/submissions/zinnengianna_356766_text.html")
-gianna_table = gianna_html %>% html_elements("table")
-gianna_data = html_table(gianna_table[[2]],header = T)
+
+gianna_data = read.table("student_dataset_previews/gianna.csv", header=T, sep=",")
 head(gianna_data)
 ```
 
@@ -67,15 +67,20 @@ head(gianna_data)
 TB activation and incident untargeted metabolomics datasets
 
 ```{r Shea}
-shea_data = read.table('assignment_submissions/submissions/20250122_CORTIS_Longitudinal_CM515.txt', header=T)
+shea_data = read.table('student_dataset_previews/shea.txt', header=T)
 head(shea_data)
+
 ```
 
 
 ### Sinead 
 
 ```{r Sinead}
-sinead=read.table('assignment_submissions/submissions2/cahillsinead_374726_34447066_2016-04-15 to 16 _ pin1-4 ML1 BdPINs Measurments ALL.txt', header=T)
+#sinead_v1=read.table('assignment_submissions/submissions2/cahillsinead_374726_34447066_2016-04-15 to 16 _ pin1-4 ML1 BdPINs Measurments ALL.txt', header=T)
+#file.copy('assignment_submissions/submissions2/cahillsinead_374726_34447066_2016-04-15 to 16 _ pin1-4 ML1 BdPINs Measurments ALL.txt','student_dataset_previews/sinead.txt')
+sinead=read.table('student_dataset_previews/sinead.txt', header=T)
+#sinead_v1 == sinead
+#all(sinead_v1 == sinead)
 head(sinead)
 ```
 
@@ -85,11 +90,18 @@ head(sinead)
 The dataset I will be using is a subset of data we collect that records the activity of a group of 6 mice every minute for 10-11 days. This data is outputted in an Excel data sheet. To process the data many of the columns are deleted and just tabs with mouse parameters are included.
 
 ```{r Susan}
-susan_file_path = "assignment_submissions/submissions/gogolski_DTA file for class.csv"
-susan_file_connection = file(susan_file_path)
-susan_file_peek = readChar(susan_file_connection,300) # used vi and command line to choose 300
-cat(susan_file_peek)
-susan_data = read.table(susan_file_connection, header=T, sep=",", skip=1)
+# susan_file_path = "assignment_submissions/submissions/gogolski_DTA file for class.csv"
+# susan_file_connection = file(susan_file_path)
+# susan_file_peek = readChar(susan_file_connection,300) # used vi and command line to choose 300
+# cat(susan_file_peek)
+# susan_data_1 = read.table(susan_file_connection, header=T, sep=",", skip=1)
+
+#file.copy("assignment_submissions/submissions/gogolski_DTA file for class.csv", "student_dataset_previews/susan.csv")
+susan_data = read.table("student_dataset_previews/susan.csv", header=T, sep=',', skip=1)
+
+# susan_data == susan_data_1 
+# all(susan_data == susan_data_1 )
+
 head(susan_data)
 ```
 ### Xuan
@@ -98,9 +110,15 @@ The data examine the different types of mutations observed through sequencing in
 
 ```{r Xuan}
 library(readxl)
-xuan_filename = "assignment_submissions/submissions/beattyxuan_362764_34400409_Traf3mutations.xlsx"
-xuan_xls = read_xlsx(xuan_filename)
-head(xuan_xls)
+# xuan_filename = "assignment_submissions/submissions/beattyxuan_362764_34400409_Traf3mutations.xlsx"
+# xuan_xls = read_xlsx(xuan_filename)
+# file.copy(xuan_filename, "student_dataset_previews/xuan.txt")
+xuan_data = read_xlsx("student_dataset_previews/xuan.txt")
+
+# xuan_xls == xuan_data
+# all(xuan_xls == xuan_data, na.rm = T)
+
+head(xuan_data)
 ```
 
 
