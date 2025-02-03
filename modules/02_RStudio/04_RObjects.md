@@ -294,7 +294,7 @@ model_systems$chromosomes
 
 model_systems$haploid
 ```
-  * **Subset** - We can pull out just a slide of the data, be they rows, columns, or individual subsets of cells using a syntax in the form of `[row, column]`. Like so...
+  * **Subset** - We can pull out just a slice of the data, be they rows, columns, or individual subsets of cells using a syntax in the form of `[row, column]`. Like so...
 
 ➡️ **FOLLOW ALONG**
 
@@ -324,6 +324,9 @@ ncol(model_systems)
 
 # What are the names of the columns?
 colnames(model_systems)
+
+# What are the names of the rows?
+rownames(model_systems)
 
 # What is the dimension of the data frame?
 dim(model_systems)
