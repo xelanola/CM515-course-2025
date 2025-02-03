@@ -8,7 +8,7 @@
   - [x] Students will become familiar with a few basic **R objects** (or extend their knowledge into new objects)
   - [ ] Students will execute a few basic **R functions** (or extend their knowledge into new functions)
     
-## Maybe in this module or next ones:
+## Next steps (we will start this but you will learn more over the next weeks):
   * **Next:** Students will learn to **import and export** data
   * **Next:** Students will learn to extend functionality of R by loading **packages**
   * **Next:** Students will gain experience in basic **plotting**
