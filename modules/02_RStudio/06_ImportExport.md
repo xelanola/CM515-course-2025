@@ -6,6 +6,8 @@ After that, we'll talk about getting plots and tables **out** of R, also called 
 
 These process are sometimes referred to as **IO**, for "Input and Output". 
 
+## How has life expectancy changed over time?
+
 First, let's download a dataset to import.
 
 I found an interesting dataset here: [Our World In Data](https://ourworldindata.org/)
@@ -74,14 +76,12 @@ getwd()
 help(read.table)
 
 # Look at the data using read.table
-read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = TRUE)
+read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", header = TRUE)
 
-# Actually, I don't like those number row names
-read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = TRUE, row.names = "location")
 
 # That only printed out the data from the file, it didn't capture it.
 # To capture the data, use an assignment expression:
-VaxByState <- read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = TRUE, row.names = "location")
+lifeExp <- read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", header = TRUE)
 
 ```
 
@@ -100,9 +100,9 @@ VaxByState <- read.table("US_COVID_Vacc_by_StateTerr.csv", sep = ",", header = T
 
 ```r
 
-dim(VaxByState)
-str(VaxByState)
-class(VaxByState)
+dim(lifeExp)
+str(lifeExp)
+class(lifeExp)
 
 ```
 
@@ -110,7 +110,6 @@ class(VaxByState)
 
 I obtained the data from [Our World In Data](https://ourworldindata.org/). This is a great resource for worldwide statistics. I use this site because their data is **clean**. What do I mean by that?
 
-  * headers don't contain spaces
   * no blank fields. Missing fields are labeled "NA"
   * no weird characters
 
@@ -118,10 +117,7 @@ One thing you will discover is that most datasets are NOT clean. It takes A LOT 
 
 I had to clean up this data quite a bit to make the neat and tidy file you just imported.
  
-  * filtered for the most recent dates
-  * removed superfluous columns
-  * re-arranged the columns
-  * removed data for US federal prisons, Defense Dept., and Veteran's hospitals because some of their data was missing.
+  * Removed duplicate data 
   
 ## Review of importing data. 
 
@@ -133,22 +129,34 @@ Just to review, here are the basic steps of importing data...
   4. Use `read.table`, `read.csv` or some other function to import the data
   5. Exploratory Data Analysis (EDA)
 
+## Amending Objects in R
+
+Once we have imported our data into R, we store it in an object. 
+
+Our data is a dataframe in the object `lifeExp`.
+
+Let's look at its structure:
+
+
+
+
 ----
 
 ## HOMEWORK QUESTION 5 (5 pts)
 
-Let's practice importing some data. Here is a real supplementary dataset that my lab recently published for a manuscript. 
+Let's practice importing some data. Try to import your selected dataset to your computer
 
-[Table_S4_Signal_to_noise_quantification_table.csv](https://drive.google.com/file/d/1bJy_ELikr5F264xRe-ASNI4iXBVYuxIP/view?usp=sharing)
-
-  * Download the file to your computer.
-  * Ensure your working directory is set properly
-  * Import the dataset into R using `read.csv()` and save it as an object called `signal_to_noise`
-  * Note - .csv stands for "comma separated value"
-  * What is the output of `str(signal_to_noise)`? **Copy and paste it here as the answer to this question.**
-  * If you were NOT able to get this to work, please explain what you tried, what is going wrong, and any output or error messages you are getting.
-
+  * Import your dataset into R
+    * How would you sync up your dataset to your current working directory?
+    * Can you use read.tabl() or read.csv() to import your data?
+    * Can you save it as an object?
+    * Copy and paste the line of code you used to import your dataset and turn it in
   
+  * Perform Exploratory Data Analysis on your dataset
+    * Copy and paste the line of code and the reported answers using the following functions on your dataset: `dim`, `str`, `class`, `summary`
+    
+  * Are there any columns that need to change type (character -> factor)? If so, write the line of code you used to change the type.
+    
 ----
 
 
