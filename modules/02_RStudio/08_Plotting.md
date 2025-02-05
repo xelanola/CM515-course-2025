@@ -76,13 +76,35 @@ Place the plotting commands between the `pdf()` command and the `dev.off()` comm
 
 ```r
 
-pdf(file = "240131_Rplot_vacc.pdf", width = 8, height = 8 )
+# Open a .pdf
+pdf(file = "250205_Rplot_lifeExp.pdf", width = 8, height = 8 )
 
-# Let's plot it!
-plot(xVacc, yBoost)
+# Plot the LifeSpan for each year
+plot(lifeExp_byYear, 
+     ylim = c(0,80),
+     main = "Period of Life Expectancy (in years) at birth, in a give year",
+     ylab = "Life Expectancy (yr)", 
+     xlab = "Year", 
+     col = "grey", 
+     pch=20 )
 
-# Let's add some labels
-text(xVacc, yBoost, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
+# Smooth the plot
+lo10 <- loess(mean ~ Year, data=lifeExp_byYear, span=0.10)
+smoothed10 <- predict(lo10) 
+
+# Add the smoothed trendline
+
+points(lifeExp_byYear$Year, 
+       smoothed10, 
+       col = "darkorange", 
+       type = "l", 
+       lwd = 2)
+
+# Add gridlines
+grid(nx = NA, ny = NULL,
+     lty = 2,      # Grid line type
+     col = "lightgray", # Grid line color
+     lwd = 1)  
 
 dev.off()
 
