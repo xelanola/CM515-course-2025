@@ -12,7 +12,7 @@
 
 -----
 
-## QUESTION 1 (5 pts) 
+## HOMEWORK QUESTION 1 (5 pts) 
 
 :white_check_mark: The purpose is to build curiosity. Students can imagine what R packages will work for their individual goals and projects.
 
@@ -22,7 +22,7 @@ B. Think about the research you would like to do. Use the [Bioconductor Website]
 
 C. Evaluate the documentation your packages have available. Compare the documentation between the 2 - 3 packages you selected. Answer: **Which packages appear easier to learn and why?**
 
-## QUESTION 2 (5 pts)
+## HOMEWORK QUESTION 2 (5 pts)
 
 :white_check_mark: Students will learn how to interface with R and RStudio
 
@@ -44,7 +44,7 @@ Sys.sleep(5)
 -----
 
 
-## QUESTION 3 (5 pts) 
+## HOMEWORK QUESTION 3 (5 pts) 
 
 :white_check_mark: Students will become familiar with a few basic R objects - vectors
 
@@ -66,9 +66,10 @@ super_vector <- c(users, logins)
 
 C. How would you force super\_vector into a numeric sub-class? *write the line of code* What happens? *copy the output and write a sentence explanation*
 
+
 -----
 
-## QUESTION 4 (5 pts) 
+## HOMEWORK QUESTION 4 (5 pts) 
 
 :white_check_mark: Students will become familiar with a few basic R objects - data frames
 
@@ -102,19 +103,20 @@ Turn in the amended code block.
 -----
 
 
-## QUESTION 5 (5 pts)
+## HOMEWORK QUESTION 5 (5 pts)
 
-Let's practice importing some data. Here is a real supplementary dataset that my lab recently published for a manuscript. 
+Let's practice importing some data. Try to import your selected dataset to your computer
 
-[Table_S4_Signal_to_noise_quantification_table.csv](https://drive.google.com/file/d/1bJy_ELikr5F264xRe-ASNI4iXBVYuxIP/view?usp=sharing)
-
-  * Download the file to your computer.
-  * Ensure your working directory is set properly
-  * Import the dataset into R using `read.csv()` and save it as an object called `signal_to_noise`
-  * Note - .csv stands for "comma separated value"
-  * What is the output of `str(signal_to_noise)`? **Copy and paste it here as the answer to this question.**
-  * If you were NOT able to get this to work, please explain what you tried, what is going wrong, and any output or error messages you are getting.
-
+  * Import your dataset into R
+    * How would you sync up your dataset to your current working directory?
+    * Can you use read.tabl() or read.csv() to import your data?
+    * Can you save it as an object?
+    * Copy and paste the line of code you used to import your dataset and turn it in
+  
+  * Perform Exploratory Data Analysis on your dataset
+    * Copy and paste the line of code and the reported answers using the following functions on your dataset: `dim`, `str`, `class`, `summary`
+    
+  * Are there any columns that need to change type (character -> factor)? If so, write the line of code you used to change the type.
 -----
 
 # Bonus content

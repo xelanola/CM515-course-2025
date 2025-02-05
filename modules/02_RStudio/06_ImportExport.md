@@ -149,7 +149,7 @@ summary(lifeExp)
 
 Screenshot 2025-02-05 at 8.03.22 AM
 
-## Reviewing importing data data. 
+## Reviewing importing steps 
 
 Just to review, here are the basic steps of importing data...
 
