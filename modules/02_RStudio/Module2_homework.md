@@ -1,6 +1,6 @@
-# Assignment 1
+# Week 2Assignment 
 
-**Due:** ?
+**Due:** Wed Feb 12, 2025. 10am. Turn in on canvas.
 
 **Instructions:** 
   * Please turn in the answers to this assignment as a .txt document. To create a .txt document in R, go to **New File**, then select **Text file**. You can use any other text editor if you like. Please do not use Mac's Text Edit application, though.
