@@ -10,6 +10,11 @@ First, let's download a dataset to import.
 
 I found an interesting dataset here: [Our World In Data](https://ourworldindata.org/)
   * Click on "Daily Data Insights" and find the article [Global average life expectancy has more than doubled since 1900](https://ourworldindata.org/data-insights/global-average-life-expectancy-has-more-than-doubled-since-1900)
+  * I followed links to [Life Expectancy](https://ourworldindata.org/life-expectancy)
+  * I downloaded the data by clicking on the down arrow in the lower right hand corner:
+
+<img src="webContent/Screenshot 2025-02-05 at 5.51.08 AM.png" width="600">
+
 
 ## Importing Data 
 
