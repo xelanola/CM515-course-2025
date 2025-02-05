@@ -34,12 +34,43 @@ install.packages("viridis")
 
 # Do this each time you want to use a viridis package:
 library(viridis)
+
+```
+
+*Here's another example: Tidyverse*
+
+```r
+
+#Let's install tidyverse
+install.packages("tidyverse")
+
+# Do this each time you want to use a viridis package:
+library(tidyverse)
+
 ```
 
 Let's check out what we got:
 
 ```r
 
+sessionInfo()
+
+```
+
+
+## Reference info on Tidyverse:
+
+  * [Tidyverse](https://tidyverse.tidyverse.org/index.html)
+
+
+## Reference info on viridis
+ 
+  * [Viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#gallery)
+
+Demo: 
+
+
+```r
 x <- y <- seq(-8*pi, 8*pi, len = 40)
 r <- sqrt(outer(x^2, y^2, "+"))
 filled.contour(cos(r^2)*exp(-r/(2*pi)), 
@@ -52,6 +83,4 @@ filled.contour(cos(r^2)*exp(-r/(2*pi)),
 
 
 
-[More info on viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html#gallery)
-
-Continue on to [Advanced Plotting Demo](08_Plotting.md)
+Continue on to [Plotting Demo](08_Plotting.md)
