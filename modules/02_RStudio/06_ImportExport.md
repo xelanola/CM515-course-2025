@@ -8,14 +8,17 @@ These process are sometimes referred to as **IO**, for "Input and Output".
 
 First, let's download a dataset to import.
 
+I found an interesting dataset here: [Our World In Data](https://ourworldindata.org/)
+  * Click on "Daily Data Insights" and find the article [Global average life expectancy has more than doubled since 1900](https://ourworldindata.org/data-insights/global-average-life-expectancy-has-more-than-doubled-since-1900)
+
 ## Importing Data 
 
 ❗**EXERCISE** Download a data file
 
-  * ➡️ Right click here:  [US_COVID_Vacc_by_StateTerr.csv](https://drive.google.com/file/d/1_0z0Bi3cg5GjWpz6FV23NMFw8V0kzQm_/view?usp=sharing)
+  * ➡️ Right click here:  [life-expectancy_1900-2023_CountriesOnly.csv](https://drive.google.com/file/d/1OYmvfRjNrD0D99hv2He-PbOKDvNXyfFh/view?usp=sharing)
   * ➡️ Download the file by clicking the down arrow in the top right set of icons.
   * ➡️ Save the file somewhere in your Documents directory/folder that makes sense. Consider adding it to a folder called "CM515". 
-  * ➡️ Ensure the file name saved is "US_COVID_Vacc_by_StateTerr.csv" by viewing it in Finder or explorer.
+  * ➡️ Ensure the file name saved is "life-expectancy_1900-2023_CountriesOnly.csv" by viewing it in Finder or explorer.
   
 ❗ Take a little time here to ensure you know where the file is. 
 
