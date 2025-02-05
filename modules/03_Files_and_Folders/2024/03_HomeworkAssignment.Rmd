@@ -1,7 +1,7 @@
 ---
 title: "Files-Folders-Homework"
-author: "Shady Kuster"
-date: "2024-02-04"
+author: "Your Name Here"
+date: "2025-02-10"
 output: html_document
 ---
 
@@ -9,15 +9,17 @@ output: html_document
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 
-library("fs")
+# library fs contains a function dir_tree() that will be used in Questions 4 and 5
+#install.package("fs") # make sure this is installed
+library("fs") 
 
 ```
 
 ## Assignment for Module 3: Files & Folders
 
-To recieve full credit, complete all sections. Upload your knitted Rmd in html, not Rmd, to Canvas. If you are having issues knitting your Rmd, email Shady (shady.kuster@colostate.edu), email David (david.king@colostate.edu), or attend coding club this Friday for help. I'm (shady) happy to meet in person, too, if that is more helpful, but I am likely unable to attend coding club due to prior commitments.  
+To receive full credit, complete all sections. Upload your knitted Rmd in html, not Rmd, to Canvas. If you are having issues knitting your Rmd, email Eliud (eliud.rivashernandez@colostate.edu), email David (david.king@colostate.edu), or attend coding club this Wednesday for help. We **(Eliud and David)** are happy to meet in person, too, if that is more helpful.
 
-This assignment is due *February 15th at 11:59 PM*. 
+This assignment is due *February 17th at 11:59 PM*. 
 
 
 ## Conceptual Questions
