@@ -99,7 +99,7 @@ lifeExp <- read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", 
 ➡️ Look at what you have acquired and make sure everything looks good!
 
 ```r
-
+# EDA
 dim(lifeExp)
 str(lifeExp)
 class(lifeExp)
@@ -128,7 +128,24 @@ Our data is a dataframe in the object `lifeExp`.
 
 Let's look at its structure:
 
-<img src="webContent/Screenshot 2025-02-05 at 8.03.22 AM.png" width="500">
+<img src="webContent/Screenshot 2025-02-05 at 8.03.22 AM.png" width="600">
+
+I'd like to change the column `Entity` and `Code` to be factors instead of characters.
+
+```r
+
+# Amend data types
+lifeExp$Entity <- as.factor(lifeExp$Entity)
+lifeExp$Code <- as.factor(lifeExp$Code)
+
+# EDA Again
+dim(lifeExp)
+str(lifeExp)
+head(lifeExp)
+class(lifeExp)
+summary(lifeExp)
+
+```
 
 Screenshot 2025-02-05 at 8.03.22 AM
 
@@ -141,6 +158,7 @@ Just to review, here are the basic steps of importing data...
   3. Set the working directory
   4. Use `read.table`, `read.csv` or some other function to import the data
   5. Exploratory Data Analysis (EDA)
+  6. Amend any data types necessary
 
 
 ----
@@ -163,7 +181,7 @@ Let's practice importing some data. Try to import your selected dataset to your 
 ----
 
 
-# Exporting Data out of R
+# Exporting Data out of R - Note - we will skip this today
 
 Next, I'll show you how to save data and plots we generate in R so they can be shared or published in reports, presentations, or publications.
 
@@ -171,7 +189,7 @@ Next, I'll show you how to save data and plots we generate in R so they can be s
 ⚠️ **BEST PRACTICES** Always include raw data tables as supplemental data when you publish a paper. Also, don't forget to acknowledge R, any packages, and note their versions in the materials & methods.
 
 
-  * First, let's say we want to filter down this Vaccination data to just 3 columns: the "date"", the "people_fully_vaccinated_per_hundred", and "total_boosters_per_hundred" . So, this'll be a little summary. Next, let's export this data frame into a tab-delimited text file. 
+  * First, let's say we want to filter down this information to just one country and export it.
 
   * Which columns are which?
 
@@ -179,16 +197,13 @@ Next, I'll show you how to save data and plots we generate in R so they can be s
 
 ```r
 
-# Look at the column names
-colnames(VaxByState)
 
-# It looks like we want columns 1, 5, & 11
+# Let's subset the so we only keep data for the USA:
+ 
+lifeExpUS <- lifeExp[which((lifeExp$Code) == "USA"), ]
 
-# Let's subset the data to create a new object called 
-VaxByState_summary <- VaxByState[ , c(1,5,11)]
-
-dim(VaxByState_summary)
-head(VaxByState_summary)
+dim(lifeExpUS)
+head(lifeExpUS)
 
 # Now, let's explore the function write.table() 
 help(write.table)
@@ -198,16 +213,11 @@ help(write.table)
 ----
 
 
-<img src="webContent/Screen Shot 2024-01-31 at 8.45.03 AM.png" width="600">
-
-----
-
-
 ➡️ Let's export using `write.table()`
 
 ```r
 
-write.table(VaxByState_summary, file = "Vaccinations_by_state_SUMMARY.txt", sep = "\t")
+write.table(lifeExpUS, file = "lifeExpectancy_USA.txt", sep = "\t")
 
 ```
 
@@ -217,106 +227,19 @@ write.table(VaxByState_summary, file = "Vaccinations_by_state_SUMMARY.txt", sep 
 
 ```r
 
-write.table(VaxByState_summary, file = "Vaccinations_by_state_SUMMARY.txt", quote = FALSE, sep = "\t")
+write.table(lifeExpUS, file = "lifeExpectancy_USA.txt", quote = FALSE, sep = "\t")
 
 ```
 
   * HOORAY! The help page really helped. We were able to find an option that met our needs.
   
-⚠️ **WARNING** If you open this in excel, the column names will be off-set so that "date" will be the column name for "state"
+⚠️ **WARNING** Sometimes when you open the file in excel, the headers are offset - double check
 
 ⚠️ **WARNING** Excel will automatically switch gene names to dates (ie: jun-1, oct-4). Use the **import** function in excel to specify the data type of each column to avoid this behavior.
 
   * **BONUS** - To export a vector object, use `write()` 
 
-----
-
-# Exporting Plots out of R
-
-Now that we know how to export a data table, how would we export a plot?
-
-Well, let's  make one first...
-
-➡️ A simple plot
-
-**X Y SCATTER PLOT** The function `plot()` uses the following syntax to plot x and y values into a scatter plot. It uses two vector objects as input: 
-
-<img src="webContent/WebContent_Powerpoint_plotting.jpg" width="800">
-
-The result looks like this:
-
-<img src="webContent/Rplot.jpeg" width="500">
-
-➡️ Let's try it! Say we want to see whether there is a relationship between the overall vaccination rates and the booster rates for different states. From first principles, we would predict that states with overall high vaccination rates also likely had high booster rates and vice versa. However, there may be interesting places where the initial rates of vaccination were high, but then the population did not boost at high levels. It would be interesting to find those states/territories.
-
-```r
-
-# We can use integer or numeric or integer classes as input
-str(VaxByState)
-
-# Use colnames to see the options for data we have available:
-colnames(VaxByState)
-
-# We'll use these x-values...
-xVacc <- VaxByState$people_vaccinated_per_hundred
-
-# ... and these y-values:
-yBoost <- VaxByState$total_boosters_per_hundred
-
-# Let's plot it!
-plot(xVacc, yBoost)
-
-# Let's add some labels
-text(xVacc, yBoost, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
-```
-
-<img src="webContent/240131_firstPlot.jpeg" width="500">
-
-OK, cool! Not the world's most beautiful plot, but good enough to demonstrate how we would save it. 
-
-To save it, you have two options...
-
-## Saving plots
-
-To save a plot, we have two options:
-
-  1. We can simply use the **Export** menu item on the top of the Plots panel. 
-
-➡️ Export your plot as a .pdf...
-
-<img src="webContent/Screen Shot 2023-01-25 at 8.48.24 AM.png" width="500">
-
-➡️ Specify the width and height of the output image. Give it a name. Save it in a location that makes sense. You may need to play around with the width/height until the plot looks nice...
-
-<img src="webContent/Screen Shot 2023-01-25 at 8.48.40 AM.png" width="500">
-
-  2. We can use commands. 
-  
-Place the plotting commands between the `pdf()` command and the `dev.off()` command. 
-
-  * `pdf()` will start "recording" what you plot into a specified file of specified dimensions.
-  * `dev.off()` will "stop recording".
-  * Sometimes we do need two dev.off() calls to return to the Rstudio plot output
-  
-➡️ Example: 
-
-```r
-
-pdf(file = "240131_Rplot_vacc.pdf", width = 8, height = 8 )
-
-# Let's plot it!
-plot(xVacc, yBoost)
-
-# Let's add some labels
-text(xVacc, yBoost, rownames(VaxByState),col='darkblue', pos = 4, cex = 0.8)
-
-dev.off()
-
-```
-
-  * By default, your plot will save to the working directory. 
-  * .pdf output can be modified as a vector graphic in Adobe Illustrator
-  * Some text doesn't render properly - you'll need to edit plots
+----- 
 
 Continue on to [Installing Packages](07_Install.md)
   
