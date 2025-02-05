@@ -58,11 +58,11 @@ To save a plot, we have two options:
 
 ➡️ Export your plot as a .pdf...
 
-<img src="webContent/Screen Shot 2023-01-25 at 8.48.24 AM.png" width="500">
+<img src="webContent/Screenshot 2025-02-05 at 8.41.25 AM.png" width="500">
 
 ➡️ Specify the width and height of the output image. Give it a name. Save it in a location that makes sense. You may need to play around with the width/height until the plot looks nice...
 
-<img src="webContent/Screen Shot 2023-01-25 at 8.48.40 AM.png" width="500">
+<img src="webContent/Screenshot 2025-02-05 at 8.46.31 AM.png" width="500">
 
   2. We can use commands. 
   
