@@ -103,6 +103,7 @@ lifeExp <- read.table("life-expectancy_1900-2023_CountriesOnly.csv", sep = ",", 
 dim(lifeExp)
 str(lifeExp)
 class(lifeExp)
+summary(lifeExp)
 
 ```
 
@@ -119,7 +120,19 @@ I had to clean up this data quite a bit to make the neat and tidy file you just 
  
   * Removed duplicate data 
   
-## Review of importing data. 
+## Amending Imported Objects in R
+
+Once we have imported our data into R, we store it in an object. 
+
+Our data is a dataframe in the object `lifeExp`.
+
+Let's look at its structure:
+
+<img src="webContent/Screenshot 2025-02-05 at 8.03.22 AM.png" width="500">
+
+Screenshot 2025-02-05 at 8.03.22 AM
+
+## Reviewing importing data data. 
 
 Just to review, here are the basic steps of importing data...
 
@@ -128,16 +141,6 @@ Just to review, here are the basic steps of importing data...
   3. Set the working directory
   4. Use `read.table`, `read.csv` or some other function to import the data
   5. Exploratory Data Analysis (EDA)
-
-## Amending Objects in R
-
-Once we have imported our data into R, we store it in an object. 
-
-Our data is a dataframe in the object `lifeExp`.
-
-Let's look at its structure:
-
-
 
 
 ----
