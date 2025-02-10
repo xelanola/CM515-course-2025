@@ -1,0 +1,155 @@
+---
+title: "Getting Started with R: Understanding Files and Folders"
+author: "Updated from Shady Kuster's Tutorial"
+date: "2025-02-10"
+output: pdf_document
+---
+
+## Setup
+
+First, let's get our tools ready:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stringr)
+library(fs)
+
+# If you need to install packages, uncomment these lines:
+# install.packages("stringr") 
+# install.packages("fs")
+```
+
+## Part 1: Understanding Your Computer's Organization 
+
+### Key Terms
+- **Directory** = Folder
+- **Working Directory** = The folder R is currently looking at
+- **Path** = The address that tells R where to find a file or folder
+
+### Checking Your Location
+
+Let's find out where R is currently looking:
+
+```{r}
+# This shows your current location
+getwd()  # "get working directory"
+```
+
+### Moving to a New Location
+
+To move to a different folder:
+
+```{r, eval=FALSE}
+# Example: Moving to Documents folder
+setwd("Documents")  # For Mac
+# OR
+setwd("C:/Users/YourName/Documents")  # For Windows
+```
+
+### **Important Tips:**
+1. Always use forward slashes (/) even on Windows
+2. Capitalization matters! "Documents" is different from "documents"
+3. Keep paths inside quotes: `setwd("Documents")`
+
+## Part 2: Creating Your Project Structure ️
+
+Let's set up a simple folder structure:
+
+```{r, eval=FALSE}
+# Store your Documents path
+my_docs <- "/Users/YourName/Documents"  # Change this to your path!
+
+# Create project folders
+dir.create(file.path(my_docs, "courses"))
+dir.create(file.path(my_docs, "courses/genetics"))
+dir.create(file.path(my_docs, "courses/cell bio"))
+dir.create(file.path(my_docs, "courses/calculus"))
+```
+
+## Part 3: Working with Files 
+
+### Creating a File
+
+```{r}
+# Write a simple message to a file
+message <- "Hello from R!"
+write(message, "hello.txt")
+```
+
+### Reading a File
+
+```{r, eval=FALSE}
+# Read the file we just created
+content <- readLines("hello.txt")
+print(content)
+```
+
+## Common Problems and Solutions 
+
+1. **File Not Found?**
+   ```r
+   # Check where R is looking
+   getwd()
+   
+   # List all files in current directory
+   list.files()
+   ```
+
+2. **Wrong Directory?**
+   ```r
+   # Go back one folder
+   setwd("..")
+   
+   # Go back two folders
+   setwd("../..")
+   ```
+
+## Practice Exercises 
+
+1. **Basic Navigation**
+   ```r
+   # Your turn! Try to:
+   # 1. Go to your Documents folder
+   # 2. Create a new folder called "r_practice"
+   # 3. Move into that folder
+   # 4. Create a file
+   # 5. Read that file
+   ```
+
+2. **File Creation Challenge**
+   ```r
+   # Create three folders:
+   # - data
+   # - results
+   # - scripts
+   ```
+
+## Tips for Success 🌟
+
+1. Before running code that reads/writes files:
+   - Check your working directory with `getwd()`
+   - Look at available files with `list.files()`
+
+2. Keep your work organized:
+   - Use consistent folder names
+   - Keep related files together
+   - Document your folder structure
+
+## Windows Users Note 🪟
+
+Windows shows paths like this: `C:\Users\Name\Documents`
+But in R, always use forward slashes: `C:/Users/Name/Documents`
+
+## Next Steps 📚
+
+1. Practice creating and navigating folders
+2. Try reading and writing different files
+3. Experiment with absolute vs relative paths
+
+Remember: Practice makes perfect! Don't worry if you make mistakes - they're part of learning. 
+
+Need help? Try:
+- Running `?setwd` to get help on any command
+- Using Google for error messages
+- Asking your instructor for clarification
+

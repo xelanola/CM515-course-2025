@@ -1,0 +1,152 @@
+---
+title: "Introduction to R Programming: Directory Management and File Operations"
+author: "Updated from Shady Kuster's Tutorial"
+date: "2025-02-10"
+output: pdf_document
+---
+
+## Getting Started 
+
+Before we begin, let's set up our environment. Run this code block to load the required packages:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stringr)
+library(fs)
+
+# If you get an error about missing packages, uncomment and run these lines:
+# install.packages("stringr") 
+# install.packages("fs")
+```
+
+## Understanding Directories: Your Computer's Filing System 
+
+Think of your computer like a filing cabinet:
+- A **directory** is just another word for a folder
+- Files are stored inside directories
+- Directories can contain other directories (like folders within folders)
+
+### What is a Working Directory? 
+
+Your working directory is like your "current location" in the filing cabinet. When you tell R to read or create a file, it will look in this location by default.
+
+Let's find out where we are:
+
+```{r}
+# This shows your current location
+current_location <- getwd()
+print(current_location)
+```
+
+### Moving Between Directories 
+
+You can move to a different directory using `setwd()`. For example:
+
+```{r, eval=FALSE}
+# Moving to your Documents folder
+setwd("Documents")  # On Mac
+# or
+setwd("C:/Users/YourName/Documents")  # On Windows
+```
+
+💡 **Important Tips for Beginners:**
+1. Use forward slashes (/) even on Windows
+2. Directory names are case-sensitive ("Documents" ≠ "documents")
+3. Always check your working directory if files aren't being found
+
+## Working with Files 
+
+### Creating a Simple Text File
+
+Let's write a friendly message to a file:
+
+```{r}
+message <- "Hello! This is my first R-created file!"
+write(message, "MyFirstFile.txt")
+```
+
+### Reading Files
+
+Now let's read the file we just created:
+
+```{r}
+# Read and display the file contents
+content <- readLines("MyFirstFile.txt")
+print(content)
+```
+
+## Practice Exercise: Directory Navigation ️
+
+Let's create a simple project structure:
+
+1. Create a folder called "my_first_project"
+2. Inside it, create two folders: "data" and "results"
+3. Navigate between them using R
+
+```{r, eval=FALSE}
+# First, go to your Documents folder
+setwd("~/Documents")  # or your preferred location
+
+# Create directories
+dir.create("my_first_project")
+dir.create("my_first_project/data")
+dir.create("my_first_project/results")
+
+# Move into the project folder
+setwd("my_first_project")
+
+# Check what folders exist here
+list.files()
+```
+
+## Variables in R: Storing Information 
+
+Think of variables like labeled boxes where you store things:
+
+```{r}
+# Storing a number
+my_age <- 25
+print(my_age)
+
+# Storing text
+my_name <- "Alex"
+print(my_name)
+
+# Storing multiple numbers
+measurements <- c(10, 15, 20, 25, 30)
+print(measurements)
+
+# Calculate average
+average <- mean(measurements)
+print(average)
+```
+
+## Common Problems and Solutions 🔧
+
+1. **File Not Found Error?**
+   - Check your working directory with `getwd()`
+   - Make sure file name spelling matches exactly
+   - Verify file exists in current directory with `list.files()`
+
+2. **Path Issues?**
+   - Always use forward slashes (/)
+   - Check for typos in directory names
+   - Verify full path with `file.path()`
+
+## Next Steps 
+
+Practice these concepts by:
+1. Creating different directories
+2. Moving between them using `setwd()`
+3. Creating and reading files in different locations
+4. Using variables to store and manipulate data
+
+Remember: Programming is like learning a new language - practice makes perfect! Don't worry if everything doesn't make sense immediately. 💪
+
+---
+
+## Additional Resources 
+
+- R for Beginners: [https://www.r-project.org/other-docs.html](https://www.r-project.org/other-docs.html)
+- RStudio Primers: [https://rstudio.cloud/learn/primers](https://rstudio.cloud/learn/primers)
+- R Markdown Guide: [https://rmarkdown.rstudio.com/lesson-1.html](https://rmarkdown.rstudio.com/lesson-1.html)
